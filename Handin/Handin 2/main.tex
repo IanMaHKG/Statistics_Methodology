@@ -1,0 +1,220 @@
+\documentclass[a4paper]{article} 
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\input{style/head.tex}
+
+%-------------------------------
+%	TITLE VARIABLES (identify your work!)
+%-------------------------------
+
+\newcommand{\yourname}{Ian Ma} % replace YOURNAME with your name
+\newcommand{\yournetid}{s1743566} % replace YOURNETID with your NetID
+\newcommand{\yourgp}{Group 12}
+\newcommand{\assignmentnumber}{2} % replace X with assignment number
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION (do not modify unless you really need to)
+%-------------------------------
+\input{style/header.tex}
+
+%-------------------------------
+%	ASSIGNMENT CONTENT (add your responses)
+%-------------------------------
+
+% Q1
+\section{}
+    Given:
+        \begin{equation*}
+            \begin{split}
+                f(y;\theta) &= \frac{y^{\phi-1} \theta^\phi e^{-y\theta}}{\Gamma(\phi)} \quad (\phi \text{ known}) \quad [1]\\
+                f(y;\theta) &= {{y-r+1}\choose{r-1}} \theta^r (1-\theta)^y \quad (r \text{ known}) \quad [2]
+            \end{split}
+        \end{equation*}
+    \subsection{}
+        [1]: \newline
+        Likelihood function:
+            \begin{equation*}
+                \begin{split}
+                    L(\theta; y_1, ... , y_n) &= \prod_{i=1}^n \frac{y_i^{\phi-1} \theta^\phi e^{-y_i\theta}}{\Gamma(\phi)}\\
+                    &= \frac{\left(\prod_{i=1}^n y_i\right)^{\phi-1} \theta^{n\phi} \exp\left(-\sum_{i-1}^n y_i\theta\right)}{{\Gamma(\phi)}^n}
+                \end{split}
+            \end{equation*}
+        Log- likelihood:
+            \begin{equation*}
+                \begin{split}
+                    l(\theta;y_1, ... , y_n) &= \ln\left(L(\theta; y_1, ... , y_n)\right)\\
+                    &= (\phi -1)\sum_{i=1}^n\ln(y_i) + n\phi\ln(\theta) - \sum_{i=1}^n y_i\theta - n\ln\Gamma(\phi)
+                \end{split}
+            \end{equation*}
+        Taking the derivative of the log- likelihood:
+            \begin{equation*}
+                \begin{split}
+                    U(\theta) &= \frac{dl}{d\theta}\\
+                    &= \frac{n\phi}{\theta} - \sum_{i=1}^n y_i
+                \end{split}
+            \end{equation*}
+        For MLE of \(\theta\), \(\hat{\theta}\):
+            \begin{equation*}
+                \begin{split}
+                    \frac{dl}{d\theta} &= 0\\
+                    \frac{n\phi}{\theta} - \sum_{i=1}^n y_i &= 0\\
+                    \frac{\theta}{n\phi} &= \frac{1}{\sum_{i=1}^n y_i}\\
+                    \theta &= \frac{n\phi}{\sum_{i=1}^n y_i}
+                \end{split}
+            \end{equation*}
+        \[\therefore \hat{\theta} = \frac{n\phi}{\sum_{i=1}^n y_i}\]
+        
+        \newpage
+        [2]: \newline
+        Likelihood function:
+            \begin{equation*}
+                \begin{split}
+                    L(\theta;y_1, ... ,y_n) &= \prod_{i=1}^n \left[{{y_i-r+1}\choose{r-1}} \theta^r (1-\theta)^{y_i}\right]\\
+                    &= \left[\prod_{i=1}^n {{y_i-r+1}\choose{r-1}}\right] \theta^{nr} (1-\theta)^{\sum_{i=1}^n y_i}
+                \end{split}
+            \end{equation*}
+        Log- likelihood:
+            \begin{equation*}
+                \begin{split}
+                    l(\theta; y_1, ..., y_n) &= \ln(L(\theta;y_1, ..., y_n))\\
+                    &= const. + nr\ln\theta + \sum_{i=1}^n y_i \ln(1-\theta)
+                \end{split}
+            \end{equation*}
+        Taking the derivative of the log- likelihood:
+            \begin{equation}
+                \begin{split}
+                    U(\theta) &= \frac{dl}{d\theta}\\
+                    &= \frac{nr}{\theta} - \frac{\sum_{i=1}^n y_i}{1-\theta}
+                \end{split}
+            \end{equation}
+        For MLE of \(\theta\), \(\hat{\theta}\):
+            \begin{equation*}
+                \begin{split}
+                    \frac{dl}{d\theta} &= 0\\
+                    \frac{nr}{\theta} - \frac{\sum_{i=1}^n y_i}{1-\theta} &= 0\\
+                    (1-\theta)nr - \theta\sum_{i=1}^n y_i &= 0\\
+                    \theta\left(nr+\sum_{i=1}^n y_i\right) &= nr\\
+                    \theta &= \frac{nr}{nr+\sum_{i=1}^n y_i}
+                \end{split}
+            \end{equation*}
+		\[\therefore \hat{\theta}=\frac{nr}{nr+\sum_{i=1}^n y_i}\]
+	
+	\newpage
+	\subsection{}
+		[1]:\newline
+			Given:
+				\begin{equation}
+					\begin{split}
+						U(\theta) &= \frac{n\phi}{\theta}-\sum_{i=1}^n y_i\\
+						U'(\theta) &= \frac{-n\phi}{\theta^2}
+					\end{split}
+				\end{equation}
+			The Fisher information:
+				\begin{equation*}
+					\begin{split}
+					I_\theta &= -\mathbb{E}(U')\\
+					&= -\mathbb{E}\left(\frac{-n\phi}{\theta^2}\right)\\
+					&= \frac{n\phi}{\theta^2}
+					\end{split}
+				\end{equation*}
+			\begin{equation*}
+				\begin{split}
+					\therefore Var(\hat{\theta}) &= I_\theta^{-1}\\
+					&= \frac{\theta^2}{n\phi}
+				\end{split}
+			\end{equation*}
+		[2]:\newline
+			Given:
+				\begin{equation*}
+					\begin{split}
+						U(\theta) &= \frac{nr}{\theta} - \frac{\sum_{i=1}^n y_i}{1-\theta}\\
+						U'(\theta) &= \frac{-nr}{\theta^2} - \frac{\sum_{i=1}^n y_i}{(1-\theta)^2}
+					\end{split}
+				\end{equation*}
+			For Fiher information:
+				\begin{equation*}
+					\begin{split}
+						I_\theta &= -\mathbb{E}(U')\\
+						&= -\mathbb{E}\left(\frac{-nr}{\theta^2} - \frac{\sum_{i=1}^n y_i}{(1-\theta)^2}\right)\\
+						&= \frac{nr}{\theta^2} + \frac{\sum_{i=1}^n \mathbb{E}(y_i)}{(1-\theta)^2}\\
+						&= \frac{nr}{\theta^2} + \frac{\sum_{i=1}^n \theta r}{(1-\theta)^3}\\
+						&= \frac{nr}{\theta^2} + \frac{nr\theta}{(1-\theta)^3}\\
+						&= \frac{nr(1-\theta)^3+nr\theta^3}{\theta^2(1-\theta)^3}
+					\end{split}
+				\end{equation*}
+			\begin{equation*}
+				\begin{split}
+					\therefore Var(\hat{\theta}) &= I_\theta^{-1}\\
+					&= \frac{\theta^2(1-\theta)^3}{nr(1-\theta)^3+nr\theta^3}
+				\end{split}
+			\end{equation*}
+
+% Q2
+\newpage
+\section{}
+	Given:
+		\[f(y;\theta) = \theta e^{-y\theta}\]
+	Likelihood:
+		\begin{equation*}
+			\begin{split}
+				L(\theta; y_1, ... ,y_n) &= \prod_{i=1}^n \left[\theta e^{-y_i \theta}\right]\\
+				&= \theta^n \exp\left(-\theta\sum_{i=1}^n y_i\right)
+			\end{split}
+		\end{equation*}
+	Log- likelihood:
+		\begin{equation*}
+			\begin{split}
+				l(\theta; y_1, ... ,y_n) &= \ln(L(\theta; y_1, ... ,y_n))\\
+				&= n\ln\theta - \theta\sum_{i=1}^n y_i
+			\end{split}
+		\end{equation*}
+	Score:
+		\begin{equation*}
+			\begin{split}
+				U(\theta) &= \frac{dl}{d\theta}\\
+				&= \frac{n}{\theta} - \sum_{i=1}^n y_i
+			\end{split}
+		\end{equation*}
+	Claim: \(\mathbb{E}(U) = 0\)\newline
+	Proof:
+		\begin{equation*}
+			\begin{split}
+				\mathbb{E}(U) &= \mathbb{E}\left(\frac{n}{\theta}-\sum_{i=1}^n y_i\right)\\
+				&= \frac{n}{\theta} - \sum_{i=1}^n\mathbb{E}(y_i)\\
+				&= \frac{n}{\theta} - \sum_{i=1}^n \frac{1}{\theta}\\
+				&= \frac{n}{\theta} - \frac{n}{\theta}\\
+				&= 0
+			\end{split}
+		\end{equation*}
+		\[\therefore \mathbb{E}(U) = 0\]
+	\newpage
+	Claim: \(Var(U) = \mathbb{E}(U^2) = -\mathbb{E}(U')\) \newline
+	Proof:
+		\begin{equation*}
+			\begin{split}
+				Var(U) &= Var\left(\frac{n}{\theta} - \sum_{i=1}^n y_i\right)\\
+				&= Var\left(\sum_{i=1}^n y_i\right)\\
+				&= \sum_{i=1}^n Var(y_1)\\
+				&= \sum_{i=1}^n \frac{1}{\theta^2}\\
+				&= \frac{n}{\theta^2}
+			\end{split}
+		\end{equation*}
+		\begin{equation*}
+			\begin{split}
+				% \mathbb{E}(U^2) &= \mathbb{E} \left[\left(\frac{n}{\theta} - \sum_{i=1}^n y_i\right)^2\right]\\
+				% &= \mathbb{E} \left[\frac{n^2}{\theta^2} - \frac{2n\sum_{i=1}^n y_i}{\theta} + \left(\sum_{i=1}^n y_i\right)^2\right]\\
+				% &= \frac{n^2}{\theta^2} - \frac{2n^2}{\theta^2} + Var
+				\mathbb{E}(U^2) &= Var(U) - \mathbb{E}(U)^2\\
+				&= \frac{n}{\theta^2} - 0^2\\
+				&= \frac{n}{\theta^2}
+			\end{split}
+		\end{equation*}
+		\begin{equation*}
+			\begin{split}
+				-\mathbb{E}(U') &= -\mathbb{E}(\frac{-n}{\theta^2})\\
+				&= \frac{n}{\theta^2}
+			\end{split}
+		\end{equation*}
+		\[\therefore Var(U) = \mathbb{E}(U^2) = -\mathbb{E}(U')\]
+\end{document}

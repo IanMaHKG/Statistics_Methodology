@@ -132,7 +132,7 @@
 						U'(\theta) &= \frac{-nr}{\theta^2} - \frac{\sum_{i=1}^n y_i}{(1-\theta)^2}
 					\end{split}
 				\end{equation*}
-			For Fiher information:
+			For Fisher information:
 				\begin{equation*}
 					\begin{split}
 						I_\theta &= -\mathbb{E}(U')\\
@@ -202,11 +202,8 @@
 		\end{equation*}
 		\begin{equation*}
 			\begin{split}
-				% \mathbb{E}(U^2) &= \mathbb{E} \left[\left(\frac{n}{\theta} - \sum_{i=1}^n y_i\right)^2\right]\\
-				% &= \mathbb{E} \left[\frac{n^2}{\theta^2} - \frac{2n\sum_{i=1}^n y_i}{\theta} + \left(\sum_{i=1}^n y_i\right)^2\right]\\
-				% &= \frac{n^2}{\theta^2} - \frac{2n^2}{\theta^2} + Var
-				\mathbb{E}(U^2) &= Var(U) - \mathbb{E}(U)^2\\
-				&= \frac{n}{\theta^2} - 0^2\\
+				\mathbb{E}(U^2) &= Var(U) + \mathbb{E}(U)^2\\
+				&= \frac{n}{\theta^2} + 0^2\\
 				&= \frac{n}{\theta^2}
 			\end{split}
 		\end{equation*}

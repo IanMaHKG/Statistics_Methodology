@@ -1,0 +1,211 @@
+\documentclass[a4paper]{article} 
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\input{style/head.tex}
+
+%-------------------------------
+%	TITLE VARIABLES (identify your work!)
+%-------------------------------
+
+\newcommand{\yourname}{Ian Ma} % replace YOURNAME with your name
+\newcommand{\yournetid}{s1743566} % replace YOURNETID with your NetID
+\newcommand{\yourgp}{Group 12}
+\newcommand{\assignmentnumber}{3} % replace X with assignment number
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION (do not modify unless you really need to)
+%-------------------------------
+\input{style/header.tex}
+
+%-------------------------------
+%	ASSIGNMENT CONTENT (add your responses)
+%-------------------------------
+
+% Q1
+\section{}
+	Given \(y_1, ... , y_n\) are all independent realizations of random variavles \(Y\) with the p.d.f.
+		\[f(y;\theta) = \theta^2 y \exp(-\theta y) \quad (y > 0)\]
+	
+	\subsection{}
+		The Likelihood:
+			\begin{equation*}
+				\begin{split}
+					L(\theta; y_1,...,y_n) &= \prod_{i=1}^n f(y_i; \theta)\\
+					&= \prod_{i=1}^n \left[\theta^2 y_i \exp(-\theta y_i) \right]\\
+					&= \theta^{2n} \left(\prod_{i=1}^n y_i \right) \exp\left(-\theta\sum_{i=1}^ny_i \right)
+				\end{split}
+			\end{equation*}
+		The Log-Likelihood:
+			\begin{equation*}
+				\begin{split}
+					l(\theta, y_1,...,y_n) &= \ln(L)\\
+					&= \ln \left[\theta^{2n} \left(\prod_{i=1}^n y_i \right) \exp\left(-\theta\sum_{i=1}^ny_i \right)\right]\\
+					&= 2n\ln\theta + {\sum_{i=1}^n \ln y_i} - \theta {\sum_{i=1}^n y_i}
+				\end{split}
+			\end{equation*}
+		The Score function:
+			\begin{equation*}
+				\begin{split}
+					U(\theta) &= \frac{dl}{d\theta}\\
+					&= \frac{d}{d\theta} \left[2n\ln\theta + {\sum_{i=1}^n \ln y_i} - \theta {\sum_{i=1}^n y_i}\right]\\
+					&= \frac{2n}{\theta} - \sum_{i=1}^n y_i
+				\end{split}
+			\end{equation*}
+			\begin{equation*}
+				U' = \frac{d^2l}{d\theta^2} = \frac{-2n}{\theta^2}
+			\end{equation*}
+		For MLE of \(\theta, \hat{\theta}\):
+			\begin{equation*}
+				\begin{split}
+					U &= 0\\
+					\frac{2n}{\theta} - \sum_{i=1}^n y_i &= 0\\
+					\frac{2n}{\theta} &= \sum_{i=1}^n y_i\\
+					\theta &= \frac{2n}{\sum_{i=1}^n y_i} = \frac{2}{\bar{y}}
+				\end{split}
+			\end{equation*}
+		As \(U' < 0\), \(\hat{\theta} = \frac{2n}{\sum_{i=1}^n y_i} = \frac{2}{\bar{y}}\) maximises the likelihood function.
+	
+	\newpage
+	\subsection{}
+		The Fisher Information:
+			\begin{equation*}
+				\begin{split}
+					I_\theta &= -\mathbb{E}(U')\\
+					&= -\mathbb{E}\left(\frac{2n}{\theta^2}\right)\\
+					&= \frac{2n}{\theta^2}
+				\end{split}
+			\end{equation*}
+			\[\therefore Var(\hat{\theta}) = I_\theta^{-1} = \frac{\theta^2}{2n}\]
+	
+	\subsection{}
+		For likelihood-ratio test:
+		\[\begin{cases}
+			H_0: \theta = \theta_0\\
+			H_0: \theta \neq \theta_0
+		\end{cases}\]
+		
+		The test statistic:
+			\begin{equation*}
+				\begin{split}
+					z_{LR} &= -2\left[\ln\frac{L(\theta_0)}{L(\hat{\theta})}\right]\\
+					&= -2 \ln\left[\frac{\theta_0^{2n} \left(\prod_{i=1}^n y_i \right) \exp\left(-\theta_0\sum_{i=1}^ny_i \right)}{\hat{\theta}^{2n} \left(\prod_{i=1}^n y_i \right) \exp\left(-\hat{\theta}\sum_{i=1}^ny_i \right)}\right]\\
+					&= -2 \left[2n(\ln\theta_0-\ln\hat{\theta})-(\theta_0-\hat{\theta})\sum_{i=1}^ny_i \right]
+				\end{split}
+			\end{equation*}
+		When \(\theta=\theta_0\), so \(H_0\) is not rejected, 
+		\[z_{LR} = -2\left[\ln\frac{L(\theta_0)}{L(\hat{\theta})}\right]=-2\ln(LR)\sim\chi_1^2\]
+	
+	\newpage
+	% Q2
+	\section{}
+		Givien \(y_1,...,y_n \sim Y\) where \(Y\) has p.d.f.
+			\[f(y;\mu) = \frac{1}{\sqrt{2\pi y^3}}\exp\left\{-\frac{(y-\mu)^2}{2\mu^2y}\right\} \quad (y>0)\]
+		
+		\subsection{}
+			The Likelihood:
+				\begin{equation*}
+					\begin{split}
+						L(\mu;\mathbf{y}) &= L(\mu;y_1,...,y_n)\\
+						&= \prod_{i=1}^n f(y_1;\mu)\\
+						&= \prod_{i=1}^n \left\{\frac{1}{\sqrt{2\pi y_i^3}}\exp\left[-\frac{(y_i-\mu)^2}{2\mu^2y_i}\right]\right\}\\
+						&= (2\pi)^{-n/2}\prod_{i=1}^n\left(y_i^{-3/2}\right) \exp \left[-\sum_{i=1}^n \frac{(y_i-\mu)^2}{2\mu^2y_i}\right]
+					\end{split}
+				\end{equation*}
+			The Log-Likelihood:
+				\begin{equation*}
+					\begin{split}
+						l(\mu;\mathbf{y}) &= \ln(L)\\
+						&= \ln \left\{(2\pi)^{-n/2}\prod_{i=1}^n\left(y_i^{-3/2}\right) \exp \left[-\sum_{i=1}^n \frac{(y_i-\mu)^2}{2\mu^2y_i}\right]\right\}\\
+						&= \frac{-n}{2}\ln(2\pi) - \frac{3}{2}\sum_{i=1}^n{y^{-3/2}} - \sum_{i=1}^n \frac{(y_i-\mu)^2}{2\mu^2y_i}
+					\end{split}
+				\end{equation*}
+			The Score:
+				\begin{equation*}
+					\begin{split}
+						U(\mu) &= \frac{dl}{d\mu}\\
+						&= \frac{d}{d\mu} \left[\frac{-n}{2}\ln(2\pi) - \frac{3}{2}\sum_{i=1}^n{y^{-3/2}} - \sum_{i=1}^n \frac{(y_i-\mu)^2}{2\mu^2y_i}\right]\\
+						&= \frac{d}{d\mu} \left[-\sum_{i=1}^n \frac{(y_i-\mu)^2}{2\mu^2y_i}\right]\\
+						&= -\sum_{i=1}^n \frac{-2(y_1-\mu)(2\mu^2y_i) - (y_i-\mu)^2(4\mu y_i)}{4\mu^4y_i^2}\\
+						&= \sum_{i=1}^n \frac{2(y_1-\mu)(2\mu^2y_i) + (y_i-\mu)^2(4\mu y_i)}{4\mu^4y_i^2}\\
+						&= \sum_{i=1}^n \frac{4\mu^2y_i^2-4\mu^3y_i + (y_i^2 - 2\mu y_i + \mu^2)(4\mu y_i)}{4\mu^4y_i^2}\\
+						&= \sum_{i=1}^n \frac{4\mu y_i^3-4\mu^2y_i^2}{4\mu^4y_i^2}\\
+						&= \sum_{i=1}^n \frac{y_i-\mu}{\mu^3}\\
+						&= \frac{1}{\mu^3} \sum_{i=1}^n \left(y_i -\mu\right)
+					\end{split}
+				\end{equation*}
+			\newpage
+			For MLE of \(\theta,\hat{\theta}\):
+				\begin{equation*}
+					\begin{split}
+						U &= 0\\
+						\frac{1}{\mu^3} \sum_{i=1}^n \left(y_i -\mu\right) &= 0\\
+						\sum_{i=1}^n \left(y_i -\mu\right) &= 0\\
+						n\mu &= \sum_{i=1}^n y_i\\
+						\mu &= \bar{y}
+					\end{split}
+				\end{equation*}
+			\[\therefore \hat{\mu} = \bar{y}\]
+			\begin{equation*}
+				\mathbb{E}(\hat{\mu}) = \mu
+			\end{equation*}
+			\begin{equation*}
+				\begin{split}
+					U'(\mu) &= \frac{d}{d\mu} \sum_{i=1}^n \left(\frac{y_i}{\mu^3} - \frac{1}{\mu^2}\right)\\
+					&= \sum_{i=1}^n \left(\frac{2}{\mu^3} - \frac{3y_i}{\mu^4}\right)
+				\end{split}
+			\end{equation*}
+			Fisher Information:
+				\begin{equation*}
+					\begin{split}
+						I_\mu &= -\mathbb{E}(U')\\
+						&= -\mathbb{E} \left[\sum_{i=1}^n \left(\frac{2}{\mu^3} - \frac{3y_i}{\mu^4}\right)\right]\\
+						&= -\sum_{i=1}^n \mathbb{E} \left(\frac{2}{\mu^3} - \frac{3y_i}{\mu^4}\right)\\
+						&= -\sum_{i=1}^n \left[\frac{2}{\mu^3} - \frac{3\mathbb{E}(y_i)}{\mu^4}\right]\\
+						&= -\sum_{i=1}^n \left[\frac{2}{\mu^3} - \frac{3\mu}{\mu^4}\right]\\
+						&= -\sum_{i=1}^n \frac{-1}{\mu^3}\\
+						&= \frac{n}{\mu^3}
+					\end{split}
+				\end{equation*}
+			Asymptotic variance:
+				\begin{equation*}
+					\begin{split}
+						Var(\hat{\mu}) &=  I_\mu^{-1} = \frac{\mu^3}{n}
+					\end{split}
+				\end{equation*}
+			\[\therefore \hat{\mu} \text{ is unbiased with asymptotic variance of } \frac{\mu^3}{n}\]
+		
+		\newpage
+		\subsection{}
+			\[\begin{cases}
+				H_0:\mu = \mu_0\\
+				H_1:\mu \neq \mu_0
+			\end{cases}\]
+			For score test, test statistic:
+				\[z_{score}=\frac{U(\theta_0)}{\sqrt{I(\hat{\theta})}}=\frac{U(\theta_0)}{\sqrt{I(\theta_0)}} \sim \mathcal{N}(0,1)\]
+			For Ratio test, test statistic:
+				\[z_{LR} = -2\left(l(\theta_0)-l(\hat{\theta})\right)\]
+			As \(z_{score}\sim\mathcal{N}(0,1)\), therefore \(z_{score}^2 = \frac{U^2(\theta_0)}{I(\theta_0)}\sim \chi_1^2\)
+			Using taylor expansion for \(l(\hat{\theta})\):
+				\[l(\hat{\theta}) \simeq l(\theta_0) + (\hat{\theta}-\theta_0)l'(\theta_0) + (\hat{\theta}-\theta_0)^2 l''(\theta_0) = l(\theta_0) + (\hat{\theta}-\theta_0)U(\theta_0) - \frac{1}{2}(\hat{\theta}-\theta_0)^2 I(\theta_0)\quad [1]\]
+			Using taylor expansion for \(U(\hat{\theta})\):
+				\begin{equation*}
+					\begin{split}
+						& 0 = U(\hat{\theta}) \simeq U(\theta_0) + (\hat{\theta}-\theta_0)U'(\theta_0) = U(\theta_0) - (\hat{\theta}-\theta_0)I(\theta_0)\\
+						\Rightarrow & \begin{cases}
+							U(\theta_0) \simeq (\hat{\theta}-\theta_0)I(\theta_0)\\
+							\hat{\theta} -\theta_0 \simeq \frac{U(\theta_0)}{I(\theta_0)}
+						\end{cases} \quad [2]
+					\end{split}
+				\end{equation*}
+			Sub [2] to [1]:
+				\begin{equation*}
+					\begin{split}
+						l(\hat{\theta}) &\simeq l(\theta_0) + U(\theta_0)\frac{U(\theta_0)}{I(\theta_0)} - \frac{1}{2} \left(\frac{U(\theta_0)}{I(\theta_0)}\right)^2I(\theta_0)\\
+						l(\hat{\theta}) - l(\theta_0) &\simeq \frac{1}{2} \frac{U^2(\theta_0)}{I(\theta_0)}\\
+						-2\left[l(\theta_0) - l(\hat{\theta})\right] &\simeq \frac{U^2(\theta_0)}{I(\theta_0)}\\
+						z_{LR} &\simeq z_{score}
+					\end{split}
+				\end{equation*}
+			therefore the two tets statistic are asymptotically equivalent.
+\end{document}

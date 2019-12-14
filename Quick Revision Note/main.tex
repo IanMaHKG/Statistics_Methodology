@@ -1,0 +1,119 @@
+\documentclass[a4paper]{article} 
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\input{style/head.tex}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+%-------------------------------
+%	TITLE VARIABLES (identify your work!)
+%-------------------------------
+
+\newcommand{\yourname}{} % replace YOURNAME with your name
+\newcommand{\yournetid}{} % replace YOURNETID with your NetID
+\newcommand{\yourgp}{}
+\newcommand{\assignmentnumber}{} % replace X with assignment number
+
+\begin{document}
+
+%-------------------------------
+%	TITLE SECTION (do not modify unless you really need to)
+%-------------------------------
+\input{style/header.tex}
+
+%-------------------------------
+%	ASSIGNMENT CONTENT (add your responses)
+%-------------------------------
+
+\section*{Basic things to remember}
+\begin{multicols}{2}
+	\begin{center}
+		Likelihood: $L(\theta; \mathbf{x}) = \prod_{i=1}^n f(x_i;\theta)$
+	\end{center}
+	\begin{center}
+		Log-Likelihood: $l(\theta; \mathbf{x}) = \sum_{i=1}^n \ln{f(x_i;\theta)}$
+	\end{center}
+\end{multicols}
+	\begin{center}
+		For MLE of $\theta$, $\hat{\theta}$: $L' = 0$ or $l' = 0$
+	\end{center}
+Score Function: $U(\theta) = l'(\theta)$\\
+Fisher Information: $I(\theta) = \mathbb{E}(U^2) = -\mathbb{E}(U')$\\
+Asympototic Varince of MLE: $var(\hat{\theta}) \approx I^{-1}(\theta)$
+\begin{multicols}{2}
+	\begin{center}
+		Observed Information: $J = -l''$\\
+		Expected Information: $I = \mathbb{E}(J)$
+	\end{center}
+\end{multicols}
+Score Test: $$z_{score} = \frac{U(\theta_0)}{\sqrt{I(\theta_0)}} = \frac{U(\theta_0)}{\sqrt{I(\hat{\theta})}} = \frac{U(\theta_0)}{\sqrt{J(\theta_0)}} = \frac{U(\theta_0)}{\sqrt{J(\hat{\theta})}} \sim N(0,1)$$
+Wald Test: $$z_{wald} = \sqrt{I(\theta_0)}(\hat{\theta} - \theta_0) = \sqrt{I(\hat{\theta})}(\hat{\theta} - \theta_0) = \sqrt{J(\theta_0)}(\hat{\theta} - \theta_0) = \sqrt{J(\hat{\theta})}(\hat{\theta} - \theta_0) \sim N(0,1)$$
+Likelihood Ratio Test:
+	\begin{multicols}{2}
+		$$-2\ln(LR) = -2[l(\theta_0)-l(\hat{\theta})] \sim \chi_1^2$$
+		$$LR = \frac{L(\theta_0)}{L({\hat{\theta}})}$$
+	\end{multicols}
+
+\section*{Multiparameter Problems $(\pmb{\theta} = (\theta_1,...,\theta_n)^T))$}
+\begin{multicols}{2}
+	\begin{center}
+		Likelihood: $L(\pmb{\theta;\mathbf{y}}) = \prod_{i=1}^n f(y_i; \pmb{\theta})$\\
+		Log-Likelihood: $l(\pmb{\theta;\mathbf{y}}) = \sum_{i=1}^n \ln f(y_i; \pmb{\theta})$\\
+	\end{center}
+\end{multicols}
+\begin{multicols}{2}
+	\begin{center}
+		Score vector: $\mathbf{U}(\pmb{\theta}) = \begin{pmatrix} \partial_{\theta_1}l \\ \vdots \\ \partial_{\theta_n}l \end{pmatrix}$\\
+		$J(\pmb{\theta}) = \begin{bmatrix} 
+			-\partial_{\theta_1}\partial_{\theta_1}l & \hdots & -\partial_{\theta_1}\partial_{\theta_n}l\\
+			\vdots & \ddots & \vdots \\
+			-\partial_{\theta_n}\partial_{\theta_1}l & \hdots & -\partial_{\theta_n}\partial_{\theta_n}l
+		\end{bmatrix}$\quad
+		$I(\pmb{\theta}) = \mathbb{E}(J)$
+	\end{center}
+\end{multicols}
+Likelihood Ration Test: $$-2[l(\pmb{\theta}_0) - l(\hat{\pmb{\theta}})] \sim \chi _n^2(\alpha)$$
+Score Test: $$\mathbf{U}(\pmb{\theta}_0)^T I^{-1} \mathbf{U}(\pmb{\theta}_0) \sim \chi_n^2(\alpha)$$
+Wald Test: $$(\hat{\pmb{\theta}} - \pmb{\theta}_0)^T I^{-1} (\hat{\pmb{\theta}} - \pmb{\theta}_0) \sim \chi_n^2(\alpha)$$
+
+\section*{Bayes Theorem}
+	\begin{itemize}
+		\item $\mathbb{P}(A_j|B) = \frac{\mathbb{P}(B|A_j)\mathbb{P}(A_j)}{\sum_{i=1}^n\mathbb{P}(B|A_i)\mathbb{P}(A_i)} = \frac{\mathbb{P}(B \cap A_j)}{\mathbb{P}(B)}$
+		\item $\mathbb{P}(B) = \sum_{i=1}^n \mathbb{P}(B \cap A_i) = \sum_{i=1}^n \mathbb{P}(B | A_i)\mathbb{P}(A_i)$
+	\end{itemize}
+	\subsection*{Baysian Modelling}
+		$$p(\pmb{\theta}|\mathbf{y}) = \frac{p(\mathbf{y};\pmb{\theta})}{f(\mathbf{y})} = \frac{f(\mathbf{y}|\pmb{\theta})p(\pmb{\theta})}{\int f(\mathbf{y}|\pmb{\theta})p(\pmb{\theta})d\pmb{\theta}}$$
+
+\section*{Iteratove Maximum Likelihood Estimation}
+	Newton-Raphson iterative formula: $$\theta_{r+1} = \theta_r - \frac{U(\theta_r)}{l''(\theta_r)} = \theta_r + \frac{U(\theta_r)}{J(\theta_r)}$$
+	Fisher's method of scoring: $$\theta_{r+1} = \theta_r - \frac{U(\theta_r)}{\mathbb{E}(l''(\theta_r))} = \theta_r + \frac{U(\theta_r)}{I(\theta_r)}$$
+
+\section*{Simple linear regression}
+	Assumption:
+	\begin{itemize}
+		\item All random variables are uncorrelated
+		\item All random variables have common variance $\sigma^2$
+		\item $\mathbb{E}(Y_i|x_i) = \beta_0 + \beta_1 x_i$
+	\end{itemize}
+	$$S_{xx} = \sum(x_i - \bar{x})^2 \equiv \sum(x_i - \bar{x})x_i \equiv \sum x_i^2 - n\bar{x}^2$$
+	$$S_{xy} = \sum(x_i - \bar{x})(y_i - \bar{y}) \equiv \sum(x_i - \bar{x})y_i = \sum x_iy_i - n\bar{x}\bar{y}$$
+	For all linear regression model $\mathbb{E}(Y_i|x_i) = \beta_0 + \beta_1 x_i$:
+	\begin{itemize}
+		\item $\hat{\beta_0} = \bar{Y} - \hat{\beta_1} x_i$
+		\item $\hat{\beta_1} = \frac{S_{xy}}{S_{xx}}$
+	\end{itemize}
+	Redidual and Regression Sum of Squares:
+		\begin{itemize}
+			\item Residual: $e_i = y_i - \hat{y_i} = y_i - \hat{\beta_0} - \hat{\beta_1}x_i = (y_i - \hat{y}) - \hat{\beta_1}(x_i - \bar{x})$
+			\item Residual Sum of Squares: \[\begin{split}
+				RSS &= \sum e_i^2\\
+				&= \sum [(y_i - \hat{y}) - \hat{\beta_1}(x_i - \bar{x})]^2\\
+				&= S_{yy} - 2\hat{\beta}_1 S_{xy} - \hat{\beta_1}^2S_{xx}\\
+				&= S_{yy} - \hat{\beta_1}S_{xy}\\
+				&= S_{yy} - \hat{\beta_1}^2S_{xx}\\
+				&= S_{yy} - \frac{S_{xy}^2}{S_{xx}}
+			\end{split}\]
+			\item $\sigma^2 = \frac{RSS}{n-2}$ 
+		\end{itemize}
+	\begin{multicols}{2}
+	\end{multicols}
+\end{document}

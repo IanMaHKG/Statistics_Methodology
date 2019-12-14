@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.11.5)  14 NOV 2019 15:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.11.5)  14 DEC 2019 18:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/ian/Documents/Stat_Methodology/Handin/Handin 4/main.tex"
-(/home/ian/Documents/Stat_Methodology/Handin/Handin 4/main.tex
+**"/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.tex"
+(/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.tex
 LaTeX2e <2019-10-01> patch level 1
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
@@ -22,7 +22,7 @@ File: size10.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (/home/ian/Documents/Stat_Methodology/Handin/Handin 4/style/head.tex (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+) (/home/ian/Documents/Stat_Methodology/Quick Revision Note/style/head.tex (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip43
 \bibsep=\skip44
@@ -425,35 +425,35 @@ Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 \f@nch@O@erf=\skip62
 \f@nch@O@olf=\skip63
 \f@nch@O@orf=\skip64
-)) (/home/ian/Documents/Stat_Methodology/Handin/Handin 4/main.aux)
+)) (/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Trying to load font information for OT1+bch on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Trying to load font information for OT1+bch on input line 16.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1bch.fd
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
 )
-LaTeX Info: Redefining \microtypecontext on input line 15.
+LaTeX Info: Redefining \microtypecontext on input line 16.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 15.
+LaTeX Info: Redefining \showhyphens on input line 16.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -461,7 +461,7 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-bch.cfg 2007/03/03 v1.5 microtype config. file: Bitstream Charter (RS)
 )
 \AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring OFF on input line 15.
+Package hyperref Info: Link coloring OFF on input line 16.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -469,10 +469,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count171
 )
-LaTeX Info: Redefining \ref on input line 15.
-LaTeX Info: Redefining \pageref on input line 15.
-LaTeX Info: Redefining \nameref on input line 15.
- (/home/ian/Documents/Stat_Methodology/Handin/Handin 4/main.out) (/home/ian/Documents/Stat_Methodology/Handin/Handin 4/main.out)
+LaTeX Info: Redefining \ref on input line 16.
+LaTeX Info: Redefining \pageref on input line 16.
+LaTeX Info: Redefining \nameref on input line 16.
+ (/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.out) (/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -502,7 +502,7 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
-) (/home/ian/Documents/Stat_Methodology/Handin/Handin 4/style/header.tex (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+) (/home/ian/Documents/Stat_Methodology/Quick Revision Note/style/header.tex (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
@@ -517,57 +517,38 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ))
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-<Rplot1A.png, id=28, 651.18282pt x 418.56375pt>
-File: Rplot1A.png Graphic file (type png)
-<use Rplot1A.png>
-Package pdftex.def Info: Rplot1A.png  used on input line 52.
-(pdftex.def)             Requested size: 473.0374pt x 304.06726pt.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/ian/Documents/Stat_Methodology/Handin/Handin 4/Rplot1A.png>]
-
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 65.
-
-[2]
-
-Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 92.
-
-LaTeX Font Info:    Trying to load font information for OMS+bch on input line 133.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsbch.fd
+LaTeX Font Info:    Trying to load font information for OMS+bch on input line 80.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsbch.fd
 File: omsbch.fd 
 )
 LaTeX Font Info:    Font shape `OMS/bch/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 133.
- [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
- (/home/ian/Documents/Stat_Methodology/Handin/Handin 4/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 196.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
+ [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
+ (/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3C8C61D545B589F3305BC61B7A2BF6C6;266.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 119.
  ) 
 Here is how much of TeX's memory you used:
- 10616 strings out of 492167
- 154364 string characters out of 6127803
- 311934 words of memory out of 5000000
- 14770 multiletter control sequences out of 15000+600000
- 21329 words of font info for 54 fonts, out of 8000000 for 9000
+ 10598 strings out of 492167
+ 154293 string characters out of 6127803
+ 313903 words of memory out of 5000000
+ 14762 multiletter control sequences out of 15000+600000
+ 17864 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,20n,51p,1064b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "/home/ian/Documents/Stat_Methodology/Handin/Handin 4/main.pdf" (5 pages, 134872 bytes).
+ 42i,16n,51p,1068b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on "/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.pdf" (2 pages, 152679 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 18486 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 94 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
+ 15873 words of extra memory for PDF output out of 17280 (max. 10000000)
 

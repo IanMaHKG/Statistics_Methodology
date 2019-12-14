@@ -82,6 +82,7 @@
 			Therefore the least square estimate:
 				\[\mathbb{E}(Y_i|x_i) = \hat{\beta_0} + \hat{\beta_1}x_i = -7.88777 + 0.52718x_i\]
 
+	\newpage
 	\subsection{}
 		As we know:
 		\[\begin{cases}
@@ -90,7 +91,7 @@
 				\hat{\beta_1} &= \frac{\sum_i (x_i - \bar{x})y_i}{\sum_i (x_i - \bar{x})x_i} = S_{xy}/S_{xx}
 			\end{split}
 		\end{cases}\]
-		And Given: \(\hat{\sigma}^2 = \frac{1}{n-2}(S_{yy}-S_{xy}^2/S_{xx}\)\\
+		And Given: \(\hat{\sigma}^2 = \frac{1}{n-2}(S_{yy}-S_{xy}^2/S_{xx})\)\\
 		Using R:
 		\begin{verbatim}
 			> Syy <- sum((y - ybar)^2)
@@ -126,7 +127,7 @@
 				&= 3.3247 \text{ }(4 \text{ d.p.})
 			\end{split}
 		\end{equation*}
-	\subsection*{}
+	\subsection{}
 		When fitting the model, we have assumed \(\forall Y_i, i = 1,2,...\), all \(Y_i\):
 			\begin{itemize}
 				\item are uncorrelated

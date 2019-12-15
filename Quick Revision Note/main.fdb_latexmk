@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1576348542 "/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.tex" "/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.pdf" "main" 1576348548
+["pdflatex"] 1576434419 "/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.tex" "/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.pdf" "main" 1576434422
   "/etc/texmf/web2c/texmf.cnf" 1570116729 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.aux" 1576348543 662 b2b94621371df8d9296b8bf5bec1b851 ""
-  "/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.tex" 1576348547 5443 9ceafddb47a8cc427f63cd73fc4933de ""
+  "/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.aux" 1576434420 662 b2b94621371df8d9296b8bf5bec1b851 ""
+  "/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.tex" 1576434422 5587 8f2ca076f11c04baab1195e495c55a79 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/bitstrea/charter/bchb7t.tfm" 1136768653 2732 006d846b4d54f9b40899c7c3eecd771a ""
@@ -114,15 +114,15 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1572468824 38842 929a1d7a93d5a7ba93034bbe3531fec4 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1572978204 4702790 679b2845f930f20536999ea25e6f2791 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1572978245 4291555 a39eba34345bf834c691df930b734e8f ""
-  "main.aux" 1576348543 662 b2b94621371df8d9296b8bf5bec1b851 ""
-  "main.out" 1576348543 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "main.tex" 1576348547 5443 9ceafddb47a8cc427f63cd73fc4933de ""
+  "main.aux" 1576434420 662 b2b94621371df8d9296b8bf5bec1b851 ""
+  "main.out" 1576434419 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "main.tex" 1576434422 5587 8f2ca076f11c04baab1195e495c55a79 ""
   "style/head.tex" 1573573649 1387 a6961a0bc0402e80ab37d8611e4719f3 ""
   "style/header.tex" 1576342337 418 d3842aa137bf26692f4b813c12a5c35b ""
   (generated)
-  "main.pdf"
   "/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.pdf"
-  "main.out"
   "/home/ian/Documents/Stat_Methodology/Quick Revision Note/main.log"
   "main.aux"
+  "main.out"
+  "main.pdf"
   "main.log"
